@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only light">
+<title>Dr. Héctor Tomás Giménez | Abogado UBA — Buenos Aires</title>
+<meta name="description" content="Dr. Héctor Tomás Giménez, abogado egresado de la UBA. Derecho de Familia, Defensa del Consumidor y Derecho Penal en CABA. Carta Documento, Divorcio, Sucesiones, Amparo y más.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/dist/tabler-icons.min.css">
+<style>
+html{color-scheme:only light;}
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --ink:#0D0E13;
+  --ink-2:#18191F;
+  --accent:#C4983C;
+  --accent-light:#D9BE7C;
+  --paper:#F6F6F2;
+  --paper-2:#EEEEEA;
+  --text-dark:#0D0E13;
+  --header-h:90px;
+  --serif:'DM Serif Display',serif;
+  --sans:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--paper);color:var(--text-dark);overflow-x:hidden;line-height:1.55;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+section{position:relative;padding:110px 0;overflow:hidden;scroll-margin-top:var(--header-h);}
+.wrap{max-width:1180px;margin:0 auto;padding:0 2rem;}
+
+/* ---------- typography ---------- */
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;letter-spacing:-.01em;}
+h2{font-size:clamp(2rem,3.8vw,3rem);}
+h3{font-size:1.3rem;}
+.serif-italic{font-style:italic;color:var(--accent-light);}
+.eyebrow{
+  font-family:var(--sans);font-size:.74rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+  display:inline-flex;align-items:center;gap:.55rem;margin-bottom:1.1rem;
+}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--accent);}
+.on-dark h2,.on-dark h3{color:var(--paper);}
+.on-dark .sec-head p{color:rgba(250,249,246,.65);}
+.sec-head{max-width:640px;margin:0 auto 3.4rem;text-align:center;}
+.sec-head p{margin-top:1rem;font-size:1.02rem;color:rgba(13,14,19,.68);}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  padding:.95rem 1.9rem;border-radius:0;border:1.5px solid transparent;
+  font-family:var(--sans);font-weight:700;font-size:.82rem;
+  text-transform:uppercase;letter-spacing:.12em;cursor:pointer;white-space:nowrap;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease,background .25s ease,color .25s ease;
+}
+.btn-primary{background:var(--accent);color:var(--paper);border-color:var(--accent);}
+.btn-primary:hover{transform:translateY(-3px);}
+.btn-ghost-dark{background:transparent;color:var(--paper);border-color:rgba(250,249,246,.35);}
+.btn-ghost-dark:hover{border-color:var(--paper);transform:translateY(-3px);}
+.btn-ghost{background:transparent;color:var(--text-dark);border-color:rgba(13,14,19,.25);}
+.btn-ghost:hover{border-color:var(--text-dark);transform:translateY(-3px);}
+
+/* ---------- grain ---------- */
+.grain::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+.grain>.wrap{position:relative;z-index:1;}
+
+/* ============ HEADER ============ */
+header{
+  position:fixed;top:0;left:0;width:100%;height:var(--header-h);z-index:500;
+  background:transparent;backdrop-filter:none;border-bottom:1px solid transparent;
+  transition:background .35s ease,backdrop-filter .35s ease,border-color .35s ease;
+}
+header.sc{background:rgba(13,14,19,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(250,249,246,.07);}
+.h-inner{max-width:1280px;margin:0 auto;height:100%;padding:0 2rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;}
+.h-logo{justify-self:start;}
+.h-logo img{height:52px;width:auto;display:block;}
+nav.desk{justify-self:center;display:flex;gap:2.2rem;}
+nav.desk a{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(250,249,246,.85);position:relative;padding:.3rem 0;}
+nav.desk a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--accent-light);transition:width .3s ease;}
+nav.desk a:hover::after{width:100%;}
+.h-cta{justify-self:end;}
+.h-cta .btn{padding:.8rem 1.5rem;font-size:.76rem;background:var(--accent);color:var(--paper);border-color:var(--accent);}
+
+/* ---------- burger (outside header DOM) ---------- */
+.burger{
+  display:none;position:fixed;top:calc(var(--header-h)/2);right:24px;
+  transform:translateY(-50%);width:46px;height:46px;
+  border:none;background:transparent;box-shadow:none;
+  align-items:center;justify-content:center;cursor:pointer;z-index:600;
+}
+.burger-box{position:relative;width:22px;height:14px;}
+.burger-box span{position:absolute;left:0;width:100%;height:2px;background:var(--paper);transition:transform .3s ease,opacity .3s ease,top .3s ease;}
+.burger-box span:nth-child(1){top:0;}
+.burger-box span:nth-child(2){top:6px;}
+.burger-box span:nth-child(3){top:12px;}
+.burger.open .burger-box span:nth-child(1){top:6px;transform:rotate(45deg);}
+.burger.open .burger-box span:nth-child(2){opacity:0;}
+.burger.open .burger-box span:nth-child(3){top:6px;transform:rotate(-45deg);}
+
+/* ---------- mnav ---------- */
+#mnav{position:fixed;top:0;right:-100%;width:80%;max-width:320px;height:100vh;background:var(--ink);z-index:550;padding:7rem 2.4rem 2rem;display:flex;flex-direction:column;align-items:center;transition:right .45s cubic-bezier(.2,.7,.2,1);}
+#mnav.open{right:0;}
+.mnav-logo img{height:48px;width:auto;opacity:.9;margin-bottom:.7rem;}
+.mnav-divider{width:40px;height:1px;background:var(--accent);margin-bottom:2.2rem;}
+#mnav a{color:var(--paper);font-family:var(--serif);font-size:1.3rem;padding:.85rem 0;text-align:center;width:100%;}
+#mnav .btn{margin-top:1.6rem;width:100%;white-space:normal;font-size:.72rem;letter-spacing:.07em;padding:1rem;}
+.mnav-overlay{position:fixed;inset:0;background:rgba(13,14,19,.6);z-index:540;opacity:0;pointer-events:none;transition:opacity .4s ease;}
+.mnav-overlay.open{opacity:1;pointer-events:auto;}
+
+@media(max-width:880px){
+  nav.desk,.h-cta{display:none;}
+  .burger{display:flex;}
+  .h-inner{display:flex;align-items:center;justify-content:center;height:100%;}
+}
+
+/* ============ HERO ============ */
+#hero{height:100vh;height:100svh;padding-top:var(--header-h);display:flex;align-items:center;background:var(--ink);overflow:hidden;}
+#hero::before{
+  content:'';position:absolute;inset:0;z-index:0;
+  background-image:
+    linear-gradient(to right, rgba(13,14,19,.78) 0%, rgba(13,14,19,.42) 45%, rgba(13,14,19,.12) 80%, rgba(13,14,19,.04) 100%),
+    url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover,cover;
+  background-position:center,center 35%;
+  filter:grayscale(100%) brightness(.22);
+}
+.hero-inner{
+  position:relative;z-index:1;
+  width:100%;max-width:1280px;margin:0 auto;padding:0 2rem;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;
+}
+.hero-text{display:flex;flex-direction:column;align-items:flex-start;}
+.hero-text h1{font-size:clamp(2.8rem,5vw,5rem);color:var(--paper);margin-bottom:1.2rem;line-height:1.05;}
+.hero-text p.lead{font-size:1.1rem;color:rgba(250,249,246,.72);max-width:460px;margin-bottom:1.8rem;}
+.hero-tags{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:2.2rem;}
+.hero-tag{
+  background:transparent;border:1.5px solid var(--accent);color:var(--accent-light);
+  font-size:.7rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  padding:.4rem 1rem;border-radius:0;
+}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;}
+.hero-deco{
+  position:relative;display:flex;align-items:center;justify-content:center;
+}
+.hero-deco-inner{
+  position:relative;width:100%;max-width:340px;
+}
+.hero-deco-bg{
+  font-family:var(--serif);font-style:italic;font-size:clamp(120px,15vw,180px);
+  color:var(--accent);opacity:.12;line-height:1;user-select:none;pointer-events:none;
+  letter-spacing:-.05em;
+}
+.hero-deco-card{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(13,14,19,.82);backdrop-filter:blur(8px);
+  border:1px solid rgba(196,152,60,.25);padding:1.4rem 1.6rem;
+}
+.hero-deco-card p{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,249,246,.55);margin-bottom:.5rem;}
+.hero-deco-card strong{font-family:var(--serif);font-size:1.2rem;color:var(--paper);}
+.hero-deco-line{width:36px;height:3px;background:var(--accent);margin-top:.6rem;}
+
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:2rem;}
+  .hero-deco{display:none;}
+  .hero-text{align-items:center;text-align:center;}
+  .hero-tags{justify-content:center;}
+  .hero-ctas{justify-content:center;}
+  .hero-text p.lead{margin-left:auto;margin-right:auto;}
+}
+@media(max-width:768px){
+  .hero-ctas{flex-direction:column;align-items:center;}
+  .hero-ctas .btn{width:100%;max-width:300px;}
+}
+
+/* ============ CREDIBILITY BAR ============ */
+.cred-bar{background:var(--ink-2);border-top:1px solid rgba(196,152,60,.15);border-bottom:1px solid rgba(196,152,60,.15);padding:2.4rem 0;}
+.cred-inner{
+  max-width:1400px;margin:0 auto;padding:0 2rem;
+  display:flex;align-items:center;justify-content:center;gap:0;
+}
+.cred-block{
+  display:flex;align-items:center;gap:1.1rem;padding:0 2.4rem;
+  position:relative;white-space:nowrap;
+}
+.cred-block:not(:last-child)::after{
+  content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);
+  width:1px;height:44px;background:rgba(196,152,60,.25);
+}
+.cred-block:first-child{padding-left:0;}
+.cred-block:last-child{border-right:none;}
+.cred-photo{
+  width:168px;height:168px;border-radius:50%;overflow:hidden;flex-shrink:0;
+  border:2px solid var(--accent-light);
+}
+.cred-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;}
+.cred-identity strong{display:block;font-family:var(--serif);font-size:1.1rem;color:var(--paper);}
+.cred-identity span{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,249,246,.55);}
+.cred-item{display:flex;align-items:center;gap:.55rem;font-size:.88rem;color:rgba(250,249,246,.82);white-space:nowrap;}
+.cred-item i{color:var(--accent-light);font-size:.95rem;flex-shrink:0;}
+.cred-item a{color:rgba(250,249,246,.82);}
+.cred-item a:hover{color:var(--paper);}
+@media(max-width:900px){
+  .cred-inner{flex-wrap:wrap;gap:1rem;}
+  .cred-block{border-right:none;padding:0;flex:0 0 auto;}
+}
+@media(max-width:768px){
+  .cred-inner{flex-direction:column;align-items:center;gap:1.2rem;}
+  .cred-block{border-right:none;padding:0;justify-content:center;}
+  .cred-block:first-child{flex-direction:column;align-items:center;text-align:center;gap:.9rem;}
+  .cred-item,.cred-item a,.cred-item span{font-size:.82rem;}
+}
+
+
+/* ============ SERVICIOS ============ */
+#servicios{background:var(--ink);}
+#servicios::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;background-position:center;opacity:.1;filter:grayscale(100%) contrast(1.1);z-index:0;
+}
+#servicios>.wrap{position:relative;z-index:1;}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(250,249,246,.07);}
+.srv-card{
+  background:var(--ink-2);border:0;border-left:3px solid var(--accent);border-radius:0;
+  padding:2rem 1.8rem;position:relative;
+  transition:background .3s ease,border-left-color .3s ease;
+}
+.srv-card:hover{background:#1E1E26;border-left-color:var(--accent-light);}
+.srv-icon{font-size:1.8rem;color:var(--accent-light);margin-bottom:1rem;opacity:.85;}
+.srv-card h3{font-size:1.08rem;font-weight:400;margin-bottom:.45rem;font-family:var(--serif);color:var(--paper);}
+.srv-card p{font-size:.86rem;color:rgba(250,249,246,.56);}
+@media(max-width:1024px){.srv-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.srv-grid{grid-template-columns:1fr;}#servicios{text-align:center;}.srv-icon{margin-left:auto;margin-right:auto;}}
+
+/* ============ SOBRE ============ */
+#sobre{background:var(--ink);color:var(--paper);}
+.sobre-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.sobre-layout h2{margin-bottom:1.6rem;}
+.sobre-bio p{color:rgba(250,249,246,.72);margin-bottom:1.6rem;font-size:1.02rem;}
+.sobre-bio{margin-top:.4rem;}
+.sobre-bio .quote{
+  border-left:3px solid var(--accent);padding-left:1.2rem;margin-top:1.8rem;
+  font-family:var(--serif);font-size:1.2rem;font-style:italic;color:var(--accent-light);
+}
+.sobre-creds{display:flex;flex-direction:column;gap:1.4rem;padding-top:.4rem;}
+.sobre-creds h3{font-size:1.05rem;color:var(--paper);margin-bottom:1.2rem;font-family:var(--sans);font-weight:700;text-transform:uppercase;letter-spacing:.1em;}
+.cred-item-s{display:flex;align-items:center;gap:.85rem;}
+.cred-item-s i{color:var(--accent-light);font-size:1.15rem;flex-shrink:0;}
+.cred-item-s span{font-size:.92rem;color:rgba(250,249,246,.82);}
+@media(max-width:1024px){.sobre-layout{grid-template-columns:1fr;gap:2.4rem;}}
+@media(max-width:768px){#sobre{text-align:center;}.cred-item-s{justify-content:center;}}
+
+/* ============ POR QUÉ ============ */
+#porque{background:var(--paper-2);}
+.pilares{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8rem;}
+.pilar{padding:.5rem;}
+.pilar-num{font-family:var(--serif);font-style:italic;font-size:2.2rem;color:var(--accent);display:block;margin-bottom:.7rem;}
+.pilar h3{font-size:1.1rem;font-weight:600;margin-bottom:.55rem;}
+.pilar p{font-size:.9rem;color:rgba(13,14,19,.65);}
+@media(max-width:1024px){.pilares{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.pilares{grid-template-columns:1fr;text-align:center;}}
+
+/* ============ PROCESO ============ */
+#proceso{background:var(--ink);}
+#proceso::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;background-position:center;opacity:.12;filter:grayscale(100%) contrast(1.1);z-index:0;
+}
+#proceso>.wrap{position:relative;z-index:1;}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8rem;}
+.proc-step{text-align:center;position:relative;}
+.proc-step::after{
+  content:'';position:absolute;top:23px;left:58%;width:84%;height:1px;
+  background:repeating-linear-gradient(to right,rgba(196,152,60,.45) 0 6px,transparent 6px 12px);
+}
+.proc-step:last-child::after{display:none;}
+.proc-num{
+  width:46px;height:46px;border-radius:50%;background:var(--ink-2);
+  border:1px solid rgba(196,152,60,.35);color:var(--accent-light);
+  font-family:var(--serif);font-size:1.1rem;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1.2rem;position:relative;z-index:1;
+}
+.proc-step h3{font-size:1rem;font-weight:600;margin-bottom:.5rem;color:var(--paper);}
+.proc-step p{font-size:.87rem;color:rgba(250,249,246,.6);}
+@media(max-width:1024px){.proc-steps{grid-template-columns:repeat(2,1fr);row-gap:2.4rem;}.proc-step::after{display:none;}}
+@media(max-width:768px){.proc-steps{grid-template-columns:1fr;}}
+
+/* ============ FAQ ============ */
+#faq{background:var(--paper);}
+.faq-list{max-width:720px;margin:0 auto;}
+.faq-item{border-bottom:1px solid rgba(13,14,19,.12);padding:1.5rem 0;cursor:pointer;}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.faq-q-text{flex:1;text-align:center;font-family:var(--serif);font-size:1.12rem;color:var(--text-dark);}
+.faq-q-icon{
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.faq-q-icon i{color:var(--accent);font-size:.85rem;}
+.faq-item.open .faq-q-icon{transform:rotate(180deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;text-align:center;}
+.faq-a p{padding-top:1rem;color:rgba(13,14,19,.68);font-size:.95rem;max-width:540px;margin:0 auto;}
+
+/* ============ CONTACTO ============ */
+#contacto{background:var(--ink);}
+#contacto::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;background-position:center;opacity:.1;filter:grayscale(100%) contrast(1.1);z-index:0;
+}
+#contacto>.wrap{position:relative;z-index:1;}
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.6rem;align-items:stretch;}
+.contacto-card{background:var(--ink-2);border:1px solid rgba(250,249,246,.1);border-radius:0;padding:2.4rem;display:flex;flex-direction:column;gap:1.4rem;}
+.c-row{display:flex;align-items:flex-start;gap:1rem;}
+.c-row i{color:var(--accent-light);font-size:1.2rem;margin-top:.15rem;flex-shrink:0;}
+.c-row strong{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(250,249,246,.5);margin-bottom:.2rem;}
+.c-row span,.c-row a{font-size:1rem;color:var(--paper);}
+.contacto-card .btn{margin-top:.6rem;background:var(--accent);color:var(--ink);border-color:var(--accent);}
+.contacto-map{border-radius:0;overflow:hidden;border:1px solid rgba(196,152,60,.15);display:flex;flex-direction:column;}
+.contacto-map iframe{width:100%;flex:1;min-height:300px;border:0;filter:grayscale(100%) contrast(1.05);}
+@media(max-width:1024px){.contacto-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){#contacto{text-align:center;}.c-row{justify-content:center;}}
+
+/* ============ FOOTER ============ */
+footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
+.f-grid{display:grid;grid-template-columns:1.4fr .9fr .9fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(250,249,246,.1);}
+.f-brand img{height:46px;width:auto;opacity:.85;margin-bottom:1rem;}
+.f-brand p{font-size:.88rem;color:rgba(250,249,246,.55);max-width:260px;margin-top:.8rem;}
+.f-social{display:flex;gap:.8rem;margin-top:1.4rem;}
+.f-social a{width:38px;height:38px;border-radius:50%;border:1px solid rgba(250,249,246,.2);display:flex;align-items:center;justify-content:center;transition:all .3s ease;}
+.f-social a:hover{background:var(--accent);border-color:var(--accent);color:var(--paper);}
+.f-col h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent-light);margin-bottom:1.2rem;}
+.f-col ul{display:flex;flex-direction:column;gap:.8rem;}
+.f-col a,.f-col span{font-size:.87rem;color:rgba(250,249,246,.62);}
+.f-col a:hover{color:var(--paper);}
+.f-col address{font-style:normal;font-size:.87rem;color:rgba(250,249,246,.62);line-height:1.65;}
+.f-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.7rem;padding-top:1.8rem;font-size:.75rem;color:rgba(250,249,246,.42);}
+.f-bottom a{color:var(--accent-light);}
+@media(max-width:1024px){.f-grid{grid-template-columns:1fr 1fr;row-gap:2.4rem;}}
+@media(max-width:768px){.f-grid{grid-template-columns:1fr;text-align:center;}.f-brand img{margin-left:auto;margin-right:auto;}.f-brand p{margin-left:auto;margin-right:auto;}.f-social{justify-content:center;}.f-col ul{align-items:center;}.f-bottom{flex-direction:column;text-align:center;justify-content:center;}}
+
+/* ============ FLOATING WA ============ */
+.fab-wa{position:fixed;bottom:22px;right:22px;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;z-index:400;box-shadow:0 12px 28px -8px rgba(37,211,102,.55);transition:transform .3s ease;}
+.fab-wa:hover{transform:scale(1.08);}
+
+/* ============ REVEALS ============ */
+.reveal,.reveal-left,.reveal-right{opacity:0;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);}
+.reveal{transform:translateY(26px);}
+.reveal-left{transform:translateX(-28px);}
+.reveal-right{transform:translateX(28px);}
+.reveal.in,.reveal-left.in,.reveal-right.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="siteHeader">
+  <div class="h-inner">
+    <a href="#hero" class="h-logo"><img src="./logo.png" alt="Héctor Giménez Abogado"></a>
+    <nav class="desk">
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="h-cta">
+      <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" class="btn">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- BURGER (fuera del header para evitar stacking-context bug) -->
+<button class="burger" id="burger" aria-label="Abrir menú">
+  <span class="burger-box"><span></span><span></span><span></span></span>
+</button>
+
+<div class="mnav-overlay" id="mnavOverlay"></div>
+<nav id="mnav">
+  <div class="mnav-logo"><img src="./logo.png" alt="Héctor Giménez Abogado"></div>
+  <div class="mnav-divider"></div>
+  <a href="#servicios">Servicios</a>
+  <a href="#sobre">Sobre mí</a>
+  <a href="#proceso">Proceso</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contacto">Contacto</a>
+  <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" class="btn btn-primary">Escribir por WhatsApp</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Abogado UBA — Buenos Aires</p>
+      <h1>Tu problema legal<br><em class="serif-italic">tiene solución</em></h1>
+      <p class="lead">Asesoramiento claro, comprometido y personalizado en CABA y Gran Buenos Aires.</p>
+      <div class="hero-tags">
+        <span class="hero-tag">Familia</span>
+        <span class="hero-tag">Consumidor</span>
+        <span class="hero-tag">Penal</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" class="btn btn-primary">Escribir por WhatsApp</a>
+        <a href="#servicios" class="btn btn-ghost-dark">Ver servicios</a>
+      </div>
+    </div>
+    <div class="hero-deco">
+      <div class="hero-deco-inner">
+        <div class="hero-deco-bg">UBA</div>
+        <div class="hero-deco-card">
+          <p>Egresado de la</p>
+          <strong>Universidad de Buenos Aires</strong>
+          <div class="hero-deco-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BARRA CREDIBILIDAD -->
+<div class="cred-bar">
+  <div class="cred-inner">
+    <div class="cred-block">
+      <div class="cred-photo"><img src="./hector.jpg" alt="Dr. Héctor Tomás Giménez"></div>
+      <div class="cred-identity">
+        <strong>Dr. Héctor Tomás Giménez</strong>
+        <span>Abogado · UBA</span>
+      </div>
+    </div>
+    <div class="cred-block">
+      <span class="cred-item"><i class="fa-brands fa-whatsapp"></i> 11 2744-0256</span>
+    </div>
+    <div class="cred-block">
+      <a href="mailto:hectorgimenezlegal@gmail.com" class="cred-item"><i class="fa-solid fa-envelope"></i> hectorgimenezlegal@gmail.com</a>
+    </div>
+    <div class="cred-block">
+      <span class="cred-item"><i class="fa-solid fa-location-dot"></i> CABA y Gran Buenos Aires</span>
+    </div>
+  </div>
+</div>
+
+<!-- BANDA CTA -->
+
+<!-- SERVICIOS -->
+<section id="servicios" class="on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" style="justify-content:center;display:inline-flex;">Servicios</p>
+      <h2>¿En qué te puedo ayudar?</h2>
+      <p>Resolución de problemas legales concretos con estrategia clara y trato directo.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="srv-card reveal">
+        <div class="srv-icon"><i class="fa-solid fa-file-contract"></i></div>
+        <h3>Carta Documento</h3>
+        <p>Redacción y gestión de cartas documento con respaldo legal.</p>
+      </div>
+      <div class="srv-card reveal" style="transition-delay:.06s">
+        <div class="srv-icon"><i class="fa-solid fa-heart-crack"></i></div>
+        <h3>Divorcio Vincular</h3>
+        <p>Divorcio de mutuo acuerdo o contencioso, acompañando en cada etapa.</p>
+      </div>
+      <div class="srv-card reveal" style="transition-delay:.12s">
+        <div class="srv-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Acción de Amparo</h3>
+        <p>Protección urgente de derechos constitucionales vulnerados.</p>
+      </div>
+      <div class="srv-card reveal" style="transition-delay:.18s">
+        <div class="srv-icon"><i class="fa-solid fa-stethoscope"></i></div>
+        <h3>Mala Praxis Médica</h3>
+        <p>Reclamos por negligencia médica y daños a la salud.</p>
+      </div>
+      <div class="srv-card reveal" style="transition-delay:.24s">
+        <div class="srv-icon"><i class="fa-solid fa-file-invoice"></i></div>
+        <h3>Sucesiones</h3>
+        <p>Tramitación de sucesiones y distribución de bienes hereditarios.</p>
+      </div>
+      <div class="srv-card reveal" style="transition-delay:.3s">
+        <div class="srv-icon"><i class="fa-solid fa-coins"></i></div>
+        <h3>Demanda de Alimentos</h3>
+        <p>Reclamación y ejecución de cuotas alimentarias.</p>
+      </div>
+      <div class="srv-card reveal" style="transition-delay:.36s">
+        <div class="srv-icon"><i class="fa-solid fa-gavel"></i></div>
+        <h3>Daños y Perjuicios</h3>
+        <p>Acciones por daños materiales, morales y psicológicos.</p>
+      </div>
+      <div class="srv-card reveal" style="transition-delay:.42s">
+        <div class="srv-icon"><i class="fa-solid fa-receipt"></i></div>
+        <h3>Defensa del Consumidor</h3>
+        <p>Reclamos por productos defectuosos, publicidad engañosa y más.</p>
+      </div>
+      <div class="srv-card reveal" style="transition-delay:.48s">
+        <div class="srv-icon"><i class="fa-solid fa-clock"></i></div>
+        <h3>Jubilaciones y Pensiones</h3>
+        <p>Tramitación, reajustes y reclamos previsionales ante ANSES.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="grain on-dark">
+  <div class="wrap">
+    <div class="sobre-layout">
+      <div class="reveal-left">
+        <p class="eyebrow">Sobre mí</p>
+        <h2>Derecho accesible,<br><em class="serif-italic">sin vueltas</em></h2>
+        <div class="sobre-bio">
+          <p>Soy abogado egresado de la Universidad de Buenos Aires (UBA), con orientación en Derecho de Familia, Defensa del Consumidor y Derecho Penal. Trabajo principalmente en CABA y GBA, atendiendo consultas de personas con problemas legales reales que necesitan respuestas concretas.</p>
+          <p>Mi enfoque es claro: que el cliente entienda exactamente en qué situación está, cuáles son sus opciones y cómo vamos a avanzar juntos.</p>
+          <blockquote class="quote">"El derecho no debería ser un laberinto para quien lo necesita."</blockquote>
+        </div>
+      </div>
+      <div class="sobre-creds reveal-right">
+        <h3>Credenciales</h3>
+        <div class="cred-item-s"><i class="fa-solid fa-graduation-cap"></i><span>Abogado — Universidad de Buenos Aires (UBA)</span></div>
+        <div class="cred-item-s"><i class="fa-solid fa-location-dot"></i><span>Ejercicio en CABA y GBA</span></div>
+        <div class="cred-item-s"><i class="fa-solid fa-users"></i><span>Especialidad: Familia, Consumidor y Penal</span></div>
+        <div class="cred-item-s"><i class="fa-solid fa-comment"></i><span>Consultas por WhatsApp o mensaje privado</span></div>
+        <div style="margin-top:2rem;">
+          <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" class="btn btn-primary">Contactar ahora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ -->
+<section id="porque">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" style="justify-content:center;display:inline-flex;">Por qué elegirme</p>
+      <h2>Asesoramiento directo,<br>sin intermediarios</h2>
+    </div>
+    <div class="pilares">
+      <div class="pilar reveal"><span class="pilar-num">01</span><h3>Egresado UBA</h3><p>Formación de calidad en la facultad de derecho más reconocida del país.</p></div>
+      <div class="pilar reveal" style="transition-delay:.07s"><span class="pilar-num">02</span><h3>Multi-área</h3><p>Familia, consumidor y penal en un solo estudio, sin derivaciones innecesarias.</p></div>
+      <div class="pilar reveal" style="transition-delay:.14s"><span class="pilar-num">03</span><h3>Trato directo</h3><p>Hablás conmigo, el abogado que lleva tu caso — no con un asistente.</p></div>
+      <div class="pilar reveal" style="transition-delay:.21s"><span class="pilar-num">04</span><h3>Claridad desde el inicio</h3><p>Te explico en lenguaje simple qué opciones tenés y cómo avanzamos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" style="justify-content:center;display:inline-flex;">Cómo trabajo</p>
+      <h2>Del primer mensaje a la resolución</h2>
+    </div>
+    <div class="proc-steps">
+      <div class="proc-step reveal"><div class="proc-num">01</div><h3>Me escribís</h3><p>Por WhatsApp o email, contándome tu situación.</p></div>
+      <div class="proc-step reveal" style="transition-delay:.08s"><div class="proc-num">02</div><h3>Analizamos el caso</h3><p>Evalúo la situación y te explico las opciones disponibles.</p></div>
+      <div class="proc-step reveal" style="transition-delay:.16s"><div class="proc-num">03</div><h3>Definimos honorarios</h3><p>Presupuesto claro — si estás de acuerdo, avanzamos.</p></div>
+      <div class="proc-step reveal" style="transition-delay:.24s"><div class="proc-num">04</div><h3>Actuamos</h3><p>Seguimiento directo en cada etapa del proceso legal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="grain">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" style="justify-content:center;display:inline-flex;">Preguntas frecuentes</p>
+      <h2>Lo que más me consultan</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal open">
+        <div class="faq-q"><span class="faq-q-text">¿Cómo inicio una consulta?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
+        <div class="faq-a"><p>Escribime por WhatsApp o email, contame brevemente tu situación y coordinamos para evaluar el caso y definir los próximos pasos.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span class="faq-q-text">¿Trabajan en CABA y GBA?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
+        <div class="faq-a"><p>Sí, atiendo casos en CABA y el Gran Buenos Aires. Para consultas de otras provincias, evaluamos la posibilidad de gestión a distancia.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span class="faq-q-text">¿Qué necesito para iniciar un divorcio?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
+        <div class="faq-a"><p>Básicamente el DNI de ambas partes y el acta de matrimonio. Dependiendo del caso (acuerdo o contencioso), pueden sumarse otros documentos. Lo coordinamos juntos.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span class="faq-q-text">¿Cuándo conviene hacer una Carta Documento?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
+        <div class="faq-a"><p>Cuando querés dejar constancia formal de una situación, reclamar algo o notificar a otra persona con respaldo legal. Es el primer paso antes de una acción judicial.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span class="faq-q-text">¿Cómo se definen los honorarios?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
+        <div class="faq-a"><p>Se definen según la complejidad del caso. Siempre presento un presupuesto claro antes de arrancar — si estás de acuerdo, recién entonces iniciamos.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" style="justify-content:center;display:inline-flex;">Contacto</p>
+      <h2>Contame tu situación</h2>
+      <p>Escribime por WhatsApp o email y evaluamos juntos cómo resolver tu caso.</p>
+    </div>
+    <div class="contacto-grid">
+      <div class="contacto-card reveal-left">
+        <div class="c-row"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank">11 2744-0256</a></div></div>
+        <div class="c-row"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><a href="mailto:hectorgimenezlegal@gmail.com">hectorgimenezlegal@gmail.com</a></div></div>
+        <div class="c-row"><i class="fa-solid fa-location-dot"></i><div><strong>Zona de atención</strong><span>CABA y Gran Buenos Aires</span></div></div>
+        <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" class="btn">Escribir ahora</a>
+      </div>
+      <div class="contacto-map reveal-right">
+        <iframe src="https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <img src="./logo.png" alt="Héctor Giménez Abogado">
+        <p>Abogado egresado de la UBA, especializado en Derecho de Familia, Defensa del Consumidor y Derecho Penal en CABA y GBA.</p>
+        <div class="f-social">
+          <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:hectorgimenezlegal@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#sobre">Sobre mí</a></li>
+          <li><a href="#porque">Por qué elegirme</a></li>
+          <li><a href="#proceso">Cómo trabajo</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><span>Carta Documento</span></li>
+          <li><span>Divorcio Vincular</span></li>
+          <li><span>Acción de Amparo</span></li>
+          <li><span>Sucesiones</span></li>
+          <li><span>Demanda de Alimentos</span></li>
+          <li><span>Defensa del Consumidor</span></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Contacto</h4>
+        <address>
+          CABA y Gran Buenos Aires<br><br>
+          <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank">11 2744-0256</a><br>
+          <a href="mailto:hectorgimenezlegal@gmail.com">hectorgimenezlegal@gmail.com</a>
+        </address>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Dr. Héctor Tomás Giménez — Abogado (UBA).</span>
+      <span>Diseño y desarrollo — <a href="#">sageeDev</a></span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" class="fab-wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script>
+// Mobile nav
+const burger=document.getElementById('burger'),mnav=document.getElementById('mnav'),overlay=document.getElementById('mnavOverlay');
+function closeNav(){burger.classList.remove('open');mnav.classList.remove('open');overlay.classList.remove('open');}
+burger.addEventListener('click',()=>{burger.classList.toggle('open');mnav.classList.toggle('open');overlay.classList.toggle('open');});
+overlay.addEventListener('click',closeNav);
+document.querySelectorAll('#mnav a').forEach(a=>a.addEventListener('click',closeNav));
+
+// Header on scroll
+const header=document.getElementById('siteHeader');
+window.addEventListener('scroll',()=>header.classList.toggle('sc',window.scrollY>40));
+
+// FAQ
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const a=item.querySelector('.faq-a');
+  if(item.classList.contains('open'))a.style.maxHeight=a.scrollHeight+'px';
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!isOpen){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+// Reveal
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.15});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
