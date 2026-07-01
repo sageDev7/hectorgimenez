@@ -213,7 +213,8 @@ nav.desk a:hover::after{width:100%;}
 }
 @media(max-width:768px){
   .cred-inner{flex-direction:column;align-items:center;gap:1.2rem;}
-  .cred-block{border-right:none;padding:0;justify-content:center;}
+  .cred-block{padding:0;justify-content:center;}
+  .cred-block::after{display:none;}
   .cred-block:first-child{flex-direction:column;align-items:center;text-align:center;gap:.9rem;}
   .cred-item,.cred-item a,.cred-item span{font-size:.82rem;}
 }
