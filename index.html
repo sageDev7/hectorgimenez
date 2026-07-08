@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="only light">
 <title>Dr. Héctor Tomás Giménez | Abogado UBA — Buenos Aires</title>
-<meta name="description" content="Dr. Héctor Tomás Giménez, abogado egresado de la UBA. Derecho de Familia, Defensa del Consumidor y Derecho Penal en CABA. Carta Documento, Divorcio, Sucesiones, Amparo y más.">
+<meta name="description" content="Dr. Héctor Tomás Giménez, abogado egresado de la UBA. Derecho de Familia, Defensa del Consumidor, Derecho Penal y Derecho Laboral en CABA. Carta Documento, Divorcio, Sucesiones, Amparo y más.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -68,7 +68,9 @@ h3{font-size:1.3rem;}
 /* ---------- grain ---------- */
 .grain::before{
   content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  will-change:transform;opacity:.3;
+  background-image:url("./grain.png");
+  background-repeat:repeat;
 }
 .grain>.wrap{position:relative;z-index:1;}
 
@@ -320,15 +322,15 @@ nav.desk a:hover::after{width:100%;}
 #contacto>.wrap{position:relative;z-index:1;}
 .contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.6rem;align-items:stretch;}
 .contacto-card{background:var(--ink-2);border:1px solid rgba(250,249,246,.1);border-radius:0;padding:2.4rem;display:flex;flex-direction:column;gap:1.4rem;}
-.c-row{display:flex;align-items:flex-start;gap:1rem;}
-.c-row i{color:var(--accent-light);font-size:1.2rem;margin-top:.15rem;flex-shrink:0;}
-.c-row strong{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(250,249,246,.5);margin-bottom:.2rem;}
-.c-row span,.c-row a{font-size:1rem;color:var(--paper);}
+.c-row{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"title title" "icon data";column-gap:.85rem;row-gap:.3rem;align-items:center;}
+.c-row strong{grid-area:title;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(250,249,246,.5);}
+.c-row .c-icon{grid-area:icon;color:var(--accent-light);font-size:1.2rem;}
+.c-row .c-data{grid-area:data;font-size:1rem;color:var(--paper);}
 .contacto-card .btn{margin-top:.6rem;background:var(--accent);color:var(--ink);border-color:var(--accent);}
 .contacto-map{border-radius:0;overflow:hidden;border:1px solid rgba(196,152,60,.15);display:flex;flex-direction:column;}
 .contacto-map iframe{width:100%;flex:1;min-height:300px;border:0;filter:grayscale(100%) contrast(1.05);}
-@media(max-width:1024px){.contacto-grid{grid-template-columns:1fr;}}
-@media(max-width:768px){#contacto{text-align:center;}.c-row{justify-content:center;}}
+@media(max-width:1024px){.contacto-grid{grid-template-columns:1fr;}.c-row{grid-template-columns:1fr;grid-template-areas:"icon" "title" "data";justify-items:center;row-gap:.35rem;}}
+@media(max-width:768px){#contacto{text-align:center;}}
 
 /* ============ FOOTER ============ */
 footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
@@ -400,13 +402,14 @@ footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <p class="eyebrow">Abogado UBA — Buenos Aires</p>
+      <p class="eyebrow">Abogado (UBA) — Buenos Aires</p>
       <h1>Tu problema legal<br><em class="serif-italic">tiene solución</em></h1>
       <p class="lead">Asesoramiento claro, comprometido y personalizado en CABA y Gran Buenos Aires.</p>
       <div class="hero-tags">
         <span class="hero-tag">Familia</span>
         <span class="hero-tag">Consumidor</span>
         <span class="hero-tag">Penal</span>
+        <span class="hero-tag">Laboral</span>
       </div>
       <div class="hero-ctas">
         <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" class="btn btn-primary">Escribir por WhatsApp</a>
@@ -516,8 +519,8 @@ footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
         <p class="eyebrow">Sobre mí</p>
         <h2>Derecho accesible,<br><em class="serif-italic">sin vueltas</em></h2>
         <div class="sobre-bio">
-          <p>Soy abogado egresado de la Universidad de Buenos Aires (UBA), con orientación en Derecho de Familia, Defensa del Consumidor y Derecho Penal. Trabajo principalmente en CABA y GBA, atendiendo consultas de personas con problemas legales reales que necesitan respuestas concretas.</p>
-          <p>Mi enfoque es claro: que el cliente entienda exactamente en qué situación está, cuáles son sus opciones y cómo vamos a avanzar juntos.</p>
+          <p>Soy abogado egresado de la Universidad de Buenos Aires (UBA), con orientación en Derecho de Familia, Defensa del Consumidor, Derecho Penal y Derecho Laboral. Trabajo principalmente en CABA y GBA, atendiendo consultas de personas con problemas legales reales que necesitan respuestas concretas.</p>
+          <p>Mi enfoque es claro: que el cliente entienda exactamente en qué situación está, cuáles son sus opciones y cómo lo voy a acompañar en cada paso.</p>
           <blockquote class="quote">"El derecho no debería ser un laberinto para quien lo necesita."</blockquote>
         </div>
       </div>
@@ -525,7 +528,7 @@ footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
         <h3>Credenciales</h3>
         <div class="cred-item-s"><i class="fa-solid fa-graduation-cap"></i><span>Abogado — Universidad de Buenos Aires (UBA)</span></div>
         <div class="cred-item-s"><i class="fa-solid fa-location-dot"></i><span>Ejercicio en CABA y GBA</span></div>
-        <div class="cred-item-s"><i class="fa-solid fa-users"></i><span>Especialidad: Familia, Consumidor y Penal</span></div>
+        <div class="cred-item-s"><i class="fa-solid fa-users"></i><span>Especialidad: Familia, Consumidor, Penal y Laboral</span></div>
         <div class="cred-item-s"><i class="fa-solid fa-comment"></i><span>Consultas por WhatsApp o mensaje privado</span></div>
         <div style="margin-top:2rem;">
           <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" class="btn btn-primary">Contactar ahora</a>
@@ -546,7 +549,7 @@ footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
       <div class="pilar reveal"><span class="pilar-num">01</span><h3>Egresado UBA</h3><p>Formación de calidad en la facultad de derecho más reconocida del país.</p></div>
       <div class="pilar reveal" style="transition-delay:.07s"><span class="pilar-num">02</span><h3>Multi-área</h3><p>Familia, consumidor y penal en un solo estudio, sin derivaciones innecesarias.</p></div>
       <div class="pilar reveal" style="transition-delay:.14s"><span class="pilar-num">03</span><h3>Trato directo</h3><p>Hablás conmigo, el abogado que lleva tu caso — no con un asistente.</p></div>
-      <div class="pilar reveal" style="transition-delay:.21s"><span class="pilar-num">04</span><h3>Claridad desde el inicio</h3><p>Te explico en lenguaje simple qué opciones tenés y cómo avanzamos.</p></div>
+      <div class="pilar reveal" style="transition-delay:.21s"><span class="pilar-num">04</span><h3>Claridad desde el inicio</h3><p>Te explico en lenguaje simple qué opciones tenés y cómo te acompaño en el proceso.</p></div>
     </div>
   </div>
 </section>
@@ -560,9 +563,9 @@ footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
     </div>
     <div class="proc-steps">
       <div class="proc-step reveal"><div class="proc-num">01</div><h3>Me escribís</h3><p>Por WhatsApp o email, contándome tu situación.</p></div>
-      <div class="proc-step reveal" style="transition-delay:.08s"><div class="proc-num">02</div><h3>Analizamos el caso</h3><p>Evalúo la situación y te explico las opciones disponibles.</p></div>
-      <div class="proc-step reveal" style="transition-delay:.16s"><div class="proc-num">03</div><h3>Definimos honorarios</h3><p>Presupuesto claro — si estás de acuerdo, avanzamos.</p></div>
-      <div class="proc-step reveal" style="transition-delay:.24s"><div class="proc-num">04</div><h3>Actuamos</h3><p>Seguimiento directo en cada etapa del proceso legal.</p></div>
+      <div class="proc-step reveal" style="transition-delay:.08s"><div class="proc-num">02</div><h3>Analizo el caso</h3><p>Evalúo la situación y te explico las opciones disponibles.</p></div>
+      <div class="proc-step reveal" style="transition-delay:.16s"><div class="proc-num">03</div><h3>Defino honorarios</h3><p>Presupuesto claro — si estás de acuerdo, empiezo.</p></div>
+      <div class="proc-step reveal" style="transition-delay:.24s"><div class="proc-num">04</div><h3>Actúo</h3><p>Seguimiento directo en cada etapa del proceso legal.</p></div>
     </div>
   </div>
 </section>
@@ -577,15 +580,15 @@ footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
     <div class="faq-list">
       <div class="faq-item reveal open">
         <div class="faq-q"><span class="faq-q-text">¿Cómo inicio una consulta?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-        <div class="faq-a"><p>Escribime por WhatsApp o email, contame brevemente tu situación y coordinamos para evaluar el caso y definir los próximos pasos.</p></div>
+        <div class="faq-a"><p>Escribime por WhatsApp o email, contame brevemente tu situación y coordino para evaluar el caso y definir los próximos pasos.</p></div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q"><span class="faq-q-text">¿Trabajan en CABA y GBA?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-        <div class="faq-a"><p>Sí, atiendo casos en CABA y el Gran Buenos Aires. Para consultas de otras provincias, evaluamos la posibilidad de gestión a distancia.</p></div>
+        <div class="faq-q"><span class="faq-q-text">¿Trabajás en CABA y GBA?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
+        <div class="faq-a"><p>Sí, atiendo casos en CABA y el Gran Buenos Aires. Para consultas de otras provincias, evalúo la posibilidad de gestión a distancia.</p></div>
       </div>
       <div class="faq-item reveal">
         <div class="faq-q"><span class="faq-q-text">¿Qué necesito para iniciar un divorcio?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-        <div class="faq-a"><p>Básicamente el DNI de ambas partes y el acta de matrimonio. Dependiendo del caso (acuerdo o contencioso), pueden sumarse otros documentos. Lo coordinamos juntos.</p></div>
+        <div class="faq-a"><p>Básicamente el DNI de ambas partes y el acta de matrimonio. Dependiendo del caso (acuerdo o contencioso), pueden sumarse otros documentos. Lo coordino con vos.</p></div>
       </div>
       <div class="faq-item reveal">
         <div class="faq-q"><span class="faq-q-text">¿Cuándo conviene hacer una Carta Documento?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
@@ -593,7 +596,7 @@ footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
       </div>
       <div class="faq-item reveal">
         <div class="faq-q"><span class="faq-q-text">¿Cómo se definen los honorarios?</span><span class="faq-q-icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-        <div class="faq-a"><p>Se definen según la complejidad del caso. Siempre presento un presupuesto claro antes de arrancar — si estás de acuerdo, recién entonces iniciamos.</p></div>
+        <div class="faq-a"><p>Se definen según la complejidad del caso. Siempre presento un presupuesto claro antes de arrancar — si estás de acuerdo, recién entonces inicio.</p></div>
       </div>
     </div>
   </div>
@@ -605,13 +608,13 @@ footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
     <div class="sec-head reveal">
       <p class="eyebrow" style="justify-content:center;display:inline-flex;">Contacto</p>
       <h2>Contame tu situación</h2>
-      <p>Escribime por WhatsApp o email y evaluamos juntos cómo resolver tu caso.</p>
+      <p>Escribime por WhatsApp o email y evalúo cómo resolver tu caso.</p>
     </div>
     <div class="contacto-grid">
       <div class="contacto-card reveal-left">
-        <div class="c-row"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank">11 2744-0256</a></div></div>
-        <div class="c-row"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><a href="mailto:hectorgimenezlegal@gmail.com">hectorgimenezlegal@gmail.com</a></div></div>
-        <div class="c-row"><i class="fa-solid fa-location-dot"></i><div><strong>Zona de atención</strong><span>CABA y Gran Buenos Aires</span></div></div>
+        <div class="c-row"><i class="c-icon fa-brands fa-whatsapp"></i><strong>WhatsApp</strong><a class="c-data" href="https://api.whatsapp.com/send?phone=541127440256" target="_blank">11 2744-0256</a></div>
+        <div class="c-row"><i class="c-icon fa-solid fa-envelope"></i><strong>Email</strong><a class="c-data" href="mailto:hectorgimenezlegal@gmail.com">hectorgimenezlegal@gmail.com</a></div>
+        <div class="c-row"><i class="c-icon fa-solid fa-location-dot"></i><strong>Zona de atención</strong><span class="c-data">CABA y Gran Buenos Aires</span></div>
         <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" class="btn">Escribir ahora</a>
       </div>
       <div class="contacto-map reveal-right">
@@ -627,7 +630,7 @@ footer{background:var(--ink);color:rgba(250,249,246,.6);padding:5rem 0 2rem;}
     <div class="f-grid">
       <div class="f-brand">
         <img src="./logo.png" alt="Héctor Giménez Abogado">
-        <p>Abogado egresado de la UBA, especializado en Derecho de Familia, Defensa del Consumidor y Derecho Penal en CABA y GBA.</p>
+        <p>Abogado egresado de la UBA, especializado en Derecho de Familia, Defensa del Consumidor, Derecho Penal y Derecho Laboral en CABA y GBA.</p>
         <div class="f-social">
           <a href="https://api.whatsapp.com/send?phone=541127440256" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           <a href="mailto:hectorgimenezlegal@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
